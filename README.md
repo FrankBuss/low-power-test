@@ -15,16 +15,14 @@ This pattern proves that RAM contents are preserved even at nanoamp-level sleep 
 
 ![Test Circuit](circuit.png)
 
-### ATtiny402 Circuit (Top), recently bought from Farnell, ATTINY402-SSNR, Date code: 2305
-- **LED**: Red LED on PA2 with 470Ω resistor
-- **Button**: Momentary switch on PA6 with 10kΩ external pull-up
-- **Capacitor**: 10µF for power supply filtering
-- **Programming**: UPDI interface via PA0
+### ATtiny402 Circuit (Top)
+Recently bought from Farnell, ATTINY402-SSNR, Date code: 2305.
 
-### PIC10F202 Circuit (Bottom), recently bought from Farnell, PIC10F202T-I/OT, Date code: 2336
-- **LED**: Red LED on GP0 with 470Ω resistor
-- **Button**: Momentary switch on GP3 with 10kΩ external pull-up
-- **Pin Configuration**: GP3 is input-only on PIC10F202
+### PIC10F202 Circuit (Bottom)
+Recently bought from Farnell, PIC10F202T-I/OT, Date code: 2336.
+
+### Capacitor
+10 µF, 0805 SMD, Digikey 1276-6456-1-ND, measured: 9.1 µF.
 
 ## Test method
 The ATtiny was programmed with avrdude and the serialupdi explained [here](https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md). After programming, the FTDI adapter was removed.
@@ -47,7 +45,7 @@ The Fluke was connected all the time during the tests. To avoid any influence of
 
 ## Power Consumption Results
 
-For the ATtiny402, 185 nA sleep current was measured, and for the PIC10F202, 1.6 nA.
+For the ATtiny402, 185 nA sleep current was measured, and for the PIC10F202, 1.6 nA, but with the Fluke connected.
 
 ## Capacitor Discharge Measurement Method
 
